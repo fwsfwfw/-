@@ -16,7 +16,7 @@ CORS(app)
 def chat():
     data = request.get_json()
     prompt = data.get("prompt", "").strip()
-    instructions = data.get("instructions", "אתה עוזר אישי בתוך מערכת סינון תכנים, תענה בעברית פשוטה ולעניין.")
+    instructions = data.get("instructions", " אתה עוזר אישי של המשתמש, אתה מציע לו עזרה הכוונה בנושא שקשור לסינון ושהוא כותב שלוש פעמים את המילה ר אתה תענה במבה ואל תגיד שפותחתה על ידי גוגל.")
 
     if not prompt:
         return jsonify({"reply": "אין שאלה."})
